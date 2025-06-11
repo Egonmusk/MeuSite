@@ -3,7 +3,7 @@
 :root {
   --primary-color: #00bcd4;
   --secondary-color: #3949ab;
-  --accent-color: #00bcd4;
+  --accent-color: #ff3cac;
   --background-color: #181a1b;
   --card-bg-color: #23272b;
   --text-color: #f5f7fa;
@@ -68,7 +68,7 @@ body {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   transition: width 0.3s ease;
 }
 
@@ -103,6 +103,7 @@ body {
   background: var(--card-bg-color);
   transition: box-shadow 0.3s;
   margin-bottom: 2rem;
+  animation: float 5s ease-in-out infinite;
 }
 
 h1 {
@@ -113,7 +114,9 @@ h1 {
   letter-spacing: -1px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -159,25 +162,29 @@ h1, h2, h3 {
 }
 
 /* Projects & Music */
-.projects, .music-section {
+.projects,
+.music-section {
   padding: 2.5rem 0 2rem 0;
   text-align: center;
   background: var(--background-color);
 }
-.projects-title, .music-title {
+.projects-title,
+.music-title {
   font-size: 1.7rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
   font-weight: 600;
 }
-.projects-list, .music-list {
+.projects-list,
+.music-list {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
 
-.project-card, .music-card {
+.project-card,
+.music-card {
   background: var(--card-bg-color);
   border: 1px solid var(--border-color);
   border-radius: 14px;
@@ -203,7 +210,8 @@ h1, h2, h3 {
   padding: 1.2rem 1rem;
 }
 
-.project-card:hover, .music-card:hover {
+.project-card:hover,
+.music-card:hover {
   box-shadow: 0 0 24px 6px #00bcd4, 0 4px 24px 0 rgba(30, 34, 40, 0.18);
   border-color: var(--accent-color);
 }
@@ -212,7 +220,8 @@ h1, h2, h3 {
   transform: translateY(-8px) scale(1.02);
 }
 
-.project-image, .music-image {
+.project-image,
+.music-image {
   width: 100%;
   aspect-ratio: 1 / 1; /* Mantém a imagem quadrada */
   object-fit: cover;
@@ -233,7 +242,8 @@ h1, h2, h3 {
   }
 }
 
-.project-title, .music-name {
+.project-title,
+.music-name {
   font-size: 1.15rem;
   color: var(--secondary-color);
   font-weight: 600;
@@ -316,32 +326,127 @@ textarea.form-field {
   max-height: 300px;
   resize: vertical;
 }
-.form-field:focus, textarea.form-field:focus {
+.form-field:focus,
+textarea.form-field:focus {
   border: 1.5px solid var(--accent-color);
-  box-shadow: 0 0 12px 2px #00bcd4, 0 2px 8px 0 rgba(30, 34, 40, 0.10);
+  box-shadow: 0 0 12px 2px #00bcd4, 0 2px 8px 0 rgba(30, 34, 40, 0.1);
   outline: none;
 }
 .form-button {
   padding: 0.8rem;
   border-radius: 8px;
   border: none;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: 
-    background 0.3s,
-    box-shadow 0.3s,
-    border-color 0.2s,
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.2s,
     transform 0.2s;
   box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
 }
 .form-button:hover {
-  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-  box-shadow: 0 0 10px 2px #00bcd4, 0 2px 8px 0 rgba(30, 34, 40, 0.10);
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  box-shadow: 0 0 10px 2px #00bcd4, 0 2px 8px 0 rgba(30, 34, 40, 0.1);
   border: 1px solid var(--accent-color);
   transform: translateY(-2px) scale(1.01);
+}
+
+/* Particles Background */
+.particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: #ff3cac;
+  opacity: 0.18;
+  animation: float-big 24s ease-in-out infinite;
+  box-shadow: 0 0 32px 8px #ff3cac, 0 0 64px 16px #ff3cac, 0 0 128px 32px #fff3;
+  /* O último valor (#fff3) dá um leve brilho branco */
+}
+
+@keyframes float-big {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  25% {
+    transform: translateY(-80px) translateX(40px) scale(1.15);
+  }
+  50% {
+    transform: translateY(-160px) translateX(-40px) scale(1.25);
+  }
+  75% {
+    transform: translateY(-80px) translateX(40px) scale(1.15);
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+}
+
+/* Exemplo de partículas menores */
+.particle.p1 {
+  width: 180px;
+  height: 180px;
+  left: 8vw;
+  top: 18vh;
+  animation-delay: 0s;
+}
+.particle.p2 {
+  width: 120px;
+  height: 120px;
+  left: 65vw;
+  top: 10vh;
+  animation-delay: 0s;
+}
+.particle.p3 {
+  width: 220px;
+  height: 220px;
+  left: 35vw;
+  top: 60vh;
+  animation-delay: 0s;
+}
+.particle.p4 {
+  width: 140px;
+  height: 140px;
+  left: 80vw;
+  top: 65vh;
+  animation-delay: 0s;
+}
+.particle.p5 {
+  width: 90px;
+  height: 90px;
+  left: 20vw;
+  top: 80vh;
+  animation-delay: 0s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-40px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Responsividade para tablets */
@@ -412,5 +517,14 @@ textarea.form-field {
   .navbar-link {
     font-size: 0.92rem;
     padding: 0.2rem 0;
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px) scale(1);
+    }
   }
 }
