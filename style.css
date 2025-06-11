@@ -176,50 +176,61 @@ h3 {
   margin-bottom: 2rem;
   font-weight: 600;
 }
-.projects-list {
+.projects-list, .music-list {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
-.project-card {
+.project-card, .music-card {
   background: var(--card-bg-color);
   border: 1px solid var(--border-color);
   border-radius: 14px;
-  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1); /* sombra discreta padrão */
-  padding: 2rem 1.5rem;
-  max-width: 420px;
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
+  padding: 2.5rem 2rem;
+  max-width: 400px;
   min-width: 320px;
+  height: 480px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  transition: box-shadow 0.3s, border-color 0.2s, transform 0.2s;
+  align-items: center;
+  box-sizing: border-box;
   gap: 0.7rem;
+  transition: box-shadow 0.3s, border-color 0.2s, transform 0.2s;
 }
 
-.project-card:hover {
-  box-shadow: 0 0 24px 6px #00bcd4,
-    /* Neon azul suave só no hover */ 0 4px 24px 0 rgba(30, 34, 40, 0.18);
+.project-card:hover, .music-card:hover {
+  box-shadow: 0 0 24px 6px #00bcd4, 0 4px 24px 0 rgba(30, 34, 40, 0.18);
   border-color: var(--accent-color);
   transform: translateY(-12px) scale(1.03);
 }
-.project-image {
+.project-image, .music-image {
   width: 100%;
-  height: 180px; /* Altura fixa para padronizar */
-  max-width: 100%;
-  object-fit: cover; /* Corta e preenche mantendo o foco */
-  object-position: center; /* Centraliza o foco da imagem */
+  height: 240px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 0.5rem;
-  box-shadow: 0 1px 8px 0 rgba(30, 34, 40, 0.08);
   background: #f5f7fa;
+  flex-shrink: 0;
 }
-.project-title {
-  font-size: 1.15rem;
+
+.project-title, .music-name {
+  font-size: 1.25rem;
   color: var(--secondary-color);
   font-weight: 600;
-  margin: 0; /* Remove margens extras */
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  min-height: 2.8em;
+  flex-shrink: 0;
 }
+
 .project-description {
   font-size: 1rem;
   text-align: left;
@@ -233,6 +244,9 @@ h3 {
   padding: 3rem 0 2rem 0;
   text-align: center;
   background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contact-title {
   font-size: 2rem;
@@ -244,7 +258,8 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 250px;
+  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
 }
 .form-field {
@@ -254,33 +269,154 @@ h3 {
   font-size: 1rem;
   background: #181a1b;
   color: var(--text-color);
-  resize: none;
+  outline: none;
+}
+textarea.form-field {
+  min-height: 120px;
+  height: 160px;
+  max-height: 300px;
+  resize: vertical;
 }
 .form-button {
   padding: 0.8rem;
   border-radius: 8px;
   border: none;
-  background: linear-gradient(
-    90deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 
+    background 0.3s,
+    box-shadow 0.3s,
+    border-color 0.2s,
+    transform 0.2s;
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
 }
+
 .form-button:hover {
-  background: linear-gradient(
-    90deg,
-    var(--secondary-color),
-    var(--primary-color)
-  );
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  box-shadow: 0 0 10px 2px #00bcd4, 0 2px 8px 0 rgba(30, 34, 40, 0.10);
+  border: 1px solid var(--accent-color);
+  transform: translateY(-2px) scale(1.01);
 }
 
 p {
   text-align: left;
+}
+
+/* Campos do formulário de contato */
+/* Removido o ruleset vazio para .form-field[type="text"], .form-field[type="email"] */
+
+.form-field[type="textarea"],
+.form-field.message,
+textarea.form-field {
+  min-height: 120px; /* aumenta a altura mínima */
+  height: 160px; /* altura padrão maior */
+  max-height: 300px; /* altura máxima opcional */
+  resize: vertical; /* permite redimensionar apenas na vertical */
+}
+
+/* Caso seu campo de mensagem seja um <textarea> com class="form-field", basta: */
+textarea.form-field {
+  min-height: 120px;
+  height: 160px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+/* Music Section */
+.music-section {
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+  background: var(--background-color);
+}
+.music-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.music-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.music-card {
+  background: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
+  padding: 2.5rem 2rem;
+  max-width: 400px;
+  min-width: 320px;
+  height: 480px; /* Card maior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 0.7rem;
+  transition: box-shadow 0.3s, border-color 0.2s, transform 0.2s; /* Adicione esta linha */
+}
+
+.music-card:hover {
+  box-shadow: 0 0 24px 6px #00bcd4, 0 4px 24px 0 rgba(30, 34, 40, 0.18);
+  border-color: var(--accent-color);
+  transform: translateY(-12px) scale(1.03);
+}
+.music-image {
+  width: 100%;
+  height: 240px; /* Imagem maior */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  background: #f5f7fa;
+  flex-shrink: 0;
+}
+
+.music-name {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  min-height: 2.8em;
+  flex-shrink: 0;
+}
+
+.music-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: auto; /* Botão sempre no rodapé do card */
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.music-link:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px #00bcd4;
+}
+
+/* Spotify Icon */
+.spotify-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem 0 1.2rem 0; /* Mais espaço acima e abaixo */
+}
+
+.spotify-icon .fa-spotify {
+  color: #1ed760;
+  font-size: 35px; /* Ícone maior */
+  display: block;
 }
 
 /* Responsive */
@@ -308,4 +444,12 @@ p {
   p {
     text-align: left;
   }
+}
+
+/* Foco nos campos do formulário */
+.form-field:focus, textarea.form-field:focus {
+  border: 1.5px solid var(--accent-color);
+  box-shadow: 0 0 16px 2px #00bcd4, 0 2px 12px 0 rgba(30, 34, 40, 0.15);
+  outline: none;
+  transition: box-shadow 0.3s, border-color 0.2s;
 }

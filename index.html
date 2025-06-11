@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Egon Fernandes</title>
+    <title>Portifólio: Egon Fernandes</title>
   </head>
   <body>
     <nav class="navbar">
@@ -16,12 +16,17 @@
         <li><a href="#inicio" class="navbar-link">Início</a></li>
         <li><a href="#about" class="navbar-link">Sobre</a></li>
         <li><a href="#projects" class="navbar-link">Projetos</a></li>
+        <li><a href="#music" class="navbar-link">Músicas</a></li>
         <li><a href="#contact" class="navbar-link">Contato</a></li>
       </ul>
     </nav>
 
     <main id="inicio" class="header">
-      <img src="assets/avatar.gif" alt="Profile Photo" class="profile-photo" />
+      <img
+        src="assets/foto_de_perfil.gif"
+        alt="Profile Photo"
+        class="profile-photo"
+      />
       <h1>Egon Fernandes</h1>
       <p class="header-subtitle">Desenvolvedor Front-End</p>
     </main>
@@ -30,13 +35,22 @@
       <h2 class="about-title">Sobre Mim</h2>
       <div class="about-box">
         <p class="about-text">
-          Olá, meu nome é Egon Fernandes, sou um desenvolvedor front-end
-          apaixonado por criar experiências digitais incríveis. Tenho
-          experiência em HTML, CSS e JavaScript, e estou sempre aprendendo novas
-          tecnologias para aprimorar minhas habilidades. Meu objetivo é
-          construir interfaces de usuário intuitivas e responsivas que
-          proporcionem uma navegação fluida e agradável.
-          <br />
+          <strong>Olá! Eu sou Egon Fernandes</strong>, desenvolvedor front-end
+          apaixonado por criar experiências digitais envolventes e acessíveis.
+          <br /><br />
+          Tenho sólida experiência em <strong>HTML</strong>,
+          <strong>CSS</strong> e <strong>JavaScript</strong>, além de estar
+          sempre em busca de novas tecnologias para aprimorar minhas
+          habilidades. <br /><br />
+          Meu objetivo é construir
+          <span style="color: var(--primary-color); font-weight: 600"
+            >interfaces intuitivas, responsivas e modernas</span
+          >
+          que proporcionem uma navegação fluida e agradável para todos os
+          usuários. <br /><br />
+          Sou movido por desafios, criatividade e pelo desejo constante de
+          aprender e evoluir como profissional. <br /><br />
+          <em>Vamos juntos transformar ideias em projetos incríveis!</em>
         </p>
       </div>
     </section>
@@ -46,57 +60,76 @@
       <div class="projects-list">
         <div class="project-card">
           <img
-            src="assets/projeto1.png"
+            src="assets/projeto_1.png"
             alt="Projeto 1"
             class="project-image"
           />
           <h3 class="project-title">Projeto 1</h3>
-          <p class="project-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            officiis ipsum repudiandae id et illum quidem nesciunt architecto
-            eum quos beatae veritatis officia aliquid, est veniam, laudantium
-            facere. Tenetur, alias.
-          </p>
+          <p class="project-description">Descrição do Projeto 1.</p>
         </div>
         <div class="project-card">
           <img
-            src="assets/projeto2.png"
+            src="assets/projeto_2.png"
             alt="Projeto 2"
             class="project-image"
           />
           <h3 class="project-title">Projeto 2</h3>
-          <p class="project-description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
-            voluptatem accusamus, nisi et molestias iure, hic sit ipsum, dolore
-            atque placeat dolor? Fugiat voluptatum, praesentium dolore ullam
-            laboriosam alias magnam?
-          </p>
+          <p class="project-description">Descrição do Projeto 2.</p>
         </div>
         <div class="project-card">
           <img
-            src="assets/projeto3.png"
+            src="assets/projeto_3.png"
             alt="Projeto 3"
             class="project-image"
           />
           <h3 class="project-title">Projeto 3</h3>
-          <p class="project-description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            quidem animi blanditiis sunt adipisci quae ut veritatis, labore
-            voluptatem molestiae nam quis enim inventore aliquid illum dolorem
-            placeat iure fugiat.
-          </p>
+          <p class="project-description">Descrição do Projeto 3.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="music" class="music-section">
+      <h2 class="music-title">Minhas Músicas</h2>
+      <div class="music-list">
+        <div class="music-card">
+          <img
+            src="assets/distant_tracks.jpg"
+            alt="Distant Tracks"
+            class="music-image"
+          />
+          <h3 class="music-name">Distant Tracks</h3>
+          <a
+            href="https://open.spotify.com/track/2TvCSNYVEtsTI5Fh8i99NM"
+            target="_blank"
+            class="music-link"
+            >Ouça no Spotify</a
+          >
+        </div>
+        <div class="music-card">
+          <img
+            src="assets/notas_singelas_da_garoa.jpg"
+            alt="Notas Singelas da Garoa"
+            class="music-image"
+          />
+          <h3 class="music-name">Notas Singelas da Garoa</h3>
+          <a
+            href="https://open.spotify.com/track/23T9s9PXQDsUwgbITy8Cgi"
+            target="_blank"
+            class="music-link"
+            >Ouça no Spotify</a
+          >
         </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
-      <h2 class="contact-title">Contato</h2>
+      <h2 class="contact-title">Entre em Contato</h2>
       <form class="contact-form" id="formulario">
-        <input type="text" placeholder="Nome" class="form-field" />
-        <input type="email" placeholder="Email" class="form-field" />
+        <input type="text" placeholder="Nome" class="form-field" required />
         <textarea
           placeholder="Digite sua Mensagem"
           class="form-field"
+          required
         ></textarea>
         <button type="submit" class="form-button">Enviar</button>
       </form>
