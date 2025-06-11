@@ -195,20 +195,42 @@ h1, h2, h3 {
   transition: box-shadow 0.3s, border-color 0.2s, transform 0.2s;
 }
 
+.music-card {
+  max-width: 300px;
+  min-width: 180px;
+  width: 100%;
+  height: 340px;
+  padding: 1.2rem 1rem;
+}
+
 .project-card:hover, .music-card:hover {
   box-shadow: 0 0 24px 6px #00bcd4, 0 4px 24px 0 rgba(30, 34, 40, 0.18);
   border-color: var(--accent-color);
+}
+
+.project-card:hover {
   transform: translateY(-8px) scale(1.02);
 }
 
 .project-image, .music-image {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 1 / 1; /* Mantém a imagem quadrada */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 0.5rem;
   background: #f5f7fa;
   flex-shrink: 0;
+}
+
+/* Em telas pequenas, mantém a proporção quadrada */
+@media screen and (max-width: 600px) {
+  .project-image,
+  .music-image {
+    aspect-ratio: 1 / 1;
+    height: auto; /* Remove altura fixa */
+    min-height: 120px;
+    max-height: 220px;
+  }
 }
 
 .project-title, .music-name {
