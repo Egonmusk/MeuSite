@@ -1,28 +1,35 @@
 # Portfólio – Egon Fernandes
 
-Este é o meu portfólio, desenvolvido para apresentar habilidades, projetos e informações de contato de forma moderna, responsiva e profissional.
+Bem-vindo ao meu portfólio! Este projeto foi criado para apresentar minhas habilidades, projetos, músicas autorais e informações de contato de forma moderna, responsiva e com visual marcante.
 
-## ✨ Funcionalidades
+## ✨ Principais Funcionalidades
 
-- Visual escuro (dark mode) com efeitos neon e gradiente
-- Layout responsivo para todos os dispositivos
-- Seções: Sobre Mim, Projetos e Contato
-- Cards de projetos com efeito de destaque ao passar o mouse
+- Visual escuro (dark mode) com gradiente de fundo e partículas neon animadas
+- Layout 100% responsivo para todos os dispositivos
+- Seções: Sobre Mim, Projetos, Músicas e Contato
+- Cards de projetos e músicas com efeito de destaque e imagens proporcionais
 - Navbar fixa com animação e efeito neon nos links
-- Formulário de contato estilizado
+- Formulário de contato estilizado, com envio direto para WhatsApp
+- Código modular, organizado em arquivos separados (HTML, CSS, JS)
 
-## 🚀 Tecnologias
+## 🚀 Tecnologias Utilizadas
 
-- HTML5
-- JavaScript
-- CSS3 (Flexbox, variáveis, efeitos visuais)
-- Fonte: [Inter](https://fonts.google.com/specimen/Inter)
+- **HTML5** – Estrutura semântica e acessível
+- **CSS3** – Flexbox, variáveis, gradientes, animações e efeitos visuais modernos
+- **JavaScript** – Interatividade (formulário de contato, integração WhatsApp)
+- **Fonte:** [Inter](https://fonts.google.com/specimen/Inter)
+
+## 🎨 Destaques Visuais
+
+- Gradiente de fundo suave e escuro, combinando com partículas neon animadas em rosa (#ff3cac)
+- Efeitos de hover com brilho neon em botões, links e cards
+- Layout limpo, elegante e fácil de navegar
 
 ## 📦 Como acessar
 
 O site está disponível em:  
-https://egonmusk.github.io/meu-site-portifolio/
+https://egon-dev.netlify.app/
 
 ---
 
-Desenvolvido por Egon Fernandes.
+Desenvolvido com 💜 por Egon Fernandes.
