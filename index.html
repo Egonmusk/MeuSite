@@ -131,9 +131,17 @@
 
     <section id="contact" class="contact">
       <h2 class="contact-title">Entre em Contato</h2>
-      <form class="contact-form" id="formulario">
-        <input type="text" placeholder="Nome" class="form-field" required />
+      <form class="contact-form" id="formulario" onsubmit="sendWhats(event)">
+        <input
+          id="name"
+          type="text"
+          placeholder="Nome"
+          class="form-field"
+          required
+        />
         <textarea
+          id="message"
+          rows="4"
           placeholder="Digite sua Mensagem"
           class="form-field"
           required
@@ -141,5 +149,6 @@
         <button type="submit" class="form-button">Enviar</button>
       </form>
     </section>
+    <script src="contact.js"></script>
   </body>
 </html>
