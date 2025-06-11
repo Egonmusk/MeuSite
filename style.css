@@ -32,29 +32,32 @@ body {
   top: 0;
   width: 100%;
   z-index: 100;
-  padding: 1.2rem 0;
+  padding: 1rem 0;
   background: linear-gradient(90deg, #23272b 0%, #3949ab 100%);
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(8px); /* efeito de desfoque atrás da navbar */
+  backdrop-filter: blur(8px);
 }
 
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-link {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1rem;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0.6rem;
   transition: color 0.2s;
-  overflow: hidden;
 }
 
 .navbar-link::after {
@@ -65,11 +68,7 @@ body {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   transition: width 0.3s ease;
 }
 
@@ -90,41 +89,38 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 80px;
+  padding-top: 90px;
   background: var(--background-color);
 }
 
 .profile-photo {
-  width: 400px;
-  height: 400px;
-  box-shadow: 0 0 24px 4px #00bcd4,
-    /* Neon blue glow */ 0 2px 16px rgba(30, 34, 40, 0.08);
+  width: 320px;
+  height: 320px;
+  box-shadow: 0 0 24px 4px #00bcd4, 0 2px 16px rgba(30, 34, 40, 0.08);
   border-radius: 50%;
   border: 4px solid var(--primary-color);
   object-fit: cover;
   background: var(--card-bg-color);
   transition: box-shadow 0.3s;
-  margin-bottom: 2.5rem; /* Adiciona espaço abaixo da foto */
+  margin-bottom: 2rem;
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   color: var(--primary-color);
   font-weight: 700;
-  margin: 40px 0 10px 0; /* Aumenta o espaço acima do nome */
+  margin: 30px 0 10px 0;
   letter-spacing: -1px;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .header-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--secondary-color);
   font-weight: 400;
   margin-bottom: 2rem;
@@ -132,46 +128,44 @@ h3 {
 
 /* About */
 .about {
-  padding: 3rem 0 2rem 0;
+  padding: 2.5rem 0 2rem 0;
   text-align: center;
   background: var(--background-color);
 }
 .about-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 .about-box {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
   background: var(--card-bg-color);
   border: 1px solid var(--border-color);
   color: var(--text-color);
   border-radius: 14px;
   box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
   padding: 2rem 2rem 1.5rem 2rem;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 2rem;
+  text-align: justify;
 }
 .about-text {
   font-size: 1.08rem;
-  text-align: left;
   color: var(--text-color);
   margin-bottom: 1rem;
   margin-top: 0;
-  line-height: 1.6;
+  line-height: 1.7;
+  text-align: justify;
 }
 
-/* Projects */
-.projects {
-  padding: 3rem 0 2rem 0;
+/* Projects & Music */
+.projects, .music-section {
+  padding: 2.5rem 0 2rem 0;
   text-align: center;
   background: var(--background-color);
 }
-.projects-title {
-  font-size: 2rem;
+.projects-title, .music-title {
+  font-size: 1.7rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
   font-weight: 600;
@@ -182,15 +176,17 @@ h3 {
   gap: 2rem;
   justify-content: center;
 }
+
 .project-card, .music-card {
   background: var(--card-bg-color);
   border: 1px solid var(--border-color);
   border-radius: 14px;
   box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
-  padding: 2.5rem 2rem;
-  max-width: 400px;
-  min-width: 320px;
-  height: 480px;
+  padding: 2rem 1.5rem;
+  max-width: 370px;
+  min-width: 220px;
+  width: 100%;
+  height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,11 +198,12 @@ h3 {
 .project-card:hover, .music-card:hover {
   box-shadow: 0 0 24px 6px #00bcd4, 0 4px 24px 0 rgba(30, 34, 40, 0.18);
   border-color: var(--accent-color);
-  transform: translateY(-12px) scale(1.03);
+  transform: translateY(-8px) scale(1.02);
 }
+
 .project-image, .music-image {
   width: 100%;
-  height: 240px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 0.5rem;
@@ -215,7 +212,7 @@ h3 {
 }
 
 .project-title, .music-name {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--secondary-color);
   font-weight: 600;
   margin: 0;
@@ -223,12 +220,14 @@ h3 {
   text-align: center;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  min-height: 2.8em;
+  min-height: 2.5em;
   flex-shrink: 0;
+  word-break: break-word;
 }
 
 .project-description {
@@ -239,9 +238,21 @@ h3 {
   line-height: 1.3;
 }
 
+.music-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: auto;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.music-link:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px #00bcd4;
+}
+
 /* Contact */
 .contact {
-  padding: 3rem 0 2rem 0;
+  padding: 2.5rem 0 2rem 0;
   text-align: center;
   background: var(--background-color);
   display: flex;
@@ -249,7 +260,7 @@ h3 {
   align-items: center;
 }
 .contact-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
   font-weight: 600;
@@ -258,9 +269,14 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   margin: 0 auto;
+  padding: 1.5rem 2rem;
+  background: var(--card-bg-color);
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.08);
 }
 .form-field {
   padding: 0.8rem;
@@ -270,12 +286,18 @@ h3 {
   background: #181a1b;
   color: var(--text-color);
   outline: none;
+  transition: box-shadow 0.3s, border-color 0.2s;
 }
 textarea.form-field {
   min-height: 120px;
   height: 160px;
   max-height: 300px;
   resize: vertical;
+}
+.form-field:focus, textarea.form-field:focus {
+  border: 1.5px solid var(--accent-color);
+  box-shadow: 0 0 12px 2px #00bcd4, 0 2px 8px 0 rgba(30, 34, 40, 0.10);
+  outline: none;
 }
 .form-button {
   padding: 0.8rem;
@@ -293,7 +315,6 @@ textarea.form-field {
     transform 0.2s;
   box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
 }
-
 .form-button:hover {
   background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
   box-shadow: 0 0 10px 2px #00bcd4, 0 2px 8px 0 rgba(30, 34, 40, 0.10);
@@ -301,155 +322,73 @@ textarea.form-field {
   transform: translateY(-2px) scale(1.01);
 }
 
-p {
-  text-align: left;
-}
-
-/* Campos do formulário de contato */
-/* Removido o ruleset vazio para .form-field[type="text"], .form-field[type="email"] */
-
-.form-field[type="textarea"],
-.form-field.message,
-textarea.form-field {
-  min-height: 120px; /* aumenta a altura mínima */
-  height: 160px; /* altura padrão maior */
-  max-height: 300px; /* altura máxima opcional */
-  resize: vertical; /* permite redimensionar apenas na vertical */
-}
-
-/* Caso seu campo de mensagem seja um <textarea> com class="form-field", basta: */
-textarea.form-field {
-  min-height: 120px;
-  height: 160px;
-  max-height: 300px;
-  resize: vertical;
-}
-
-/* Music Section */
-.music-section {
-  padding: 3rem 0 2rem 0;
-  text-align: center;
-  background: var(--background-color);
-}
-.music-title {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-  font-weight: 600;
-}
-.music-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-.music-card {
-  background: var(--card-bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
-  padding: 2.5rem 2rem;
-  max-width: 400px;
-  min-width: 320px;
-  height: 480px; /* Card maior */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  gap: 0.7rem;
-  transition: box-shadow 0.3s, border-color 0.2s, transform 0.2s; /* Adicione esta linha */
-}
-
-.music-card:hover {
-  box-shadow: 0 0 24px 6px #00bcd4, 0 4px 24px 0 rgba(30, 34, 40, 0.18);
-  border-color: var(--accent-color);
-  transform: translateY(-12px) scale(1.03);
-}
-.music-image {
-  width: 100%;
-  height: 240px; /* Imagem maior */
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-  background: #f5f7fa;
-  flex-shrink: 0;
-}
-
-.music-name {
-  font-size: 1.25rem;
-  color: var(--secondary-color);
-  font-weight: 600;
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  min-height: 2.8em;
-  flex-shrink: 0;
-}
-
-.music-link {
-  color: var(--primary-color);
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: auto; /* Botão sempre no rodapé do card */
-  transition: color 0.2s, text-shadow 0.2s;
-}
-.music-link:hover {
-  color: var(--accent-color);
-  text-shadow: 0 0 8px #00bcd4;
-}
-
-/* Spotify Icon */
-.spotify-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.2rem 0 1.2rem 0; /* Mais espaço acima e abaixo */
-}
-
-.spotify-icon .fa-spotify {
-  color: #1ed760;
-  font-size: 35px; /* Ícone maior */
-  display: block;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .projects-list {
+/* Responsividade para tablets */
+@media screen and (max-width: 900px) {
+  .projects-list,
+  .music-list {
     flex-direction: column;
     align-items: center;
   }
+  .project-card,
+  .music-card {
+    max-width: 95vw;
+    min-width: 0;
+    width: 90vw;
+    height: auto;
+    padding: 1.2rem 0.7rem;
+  }
   .profile-photo {
-    width: 250px;
-    height: 250px;
+    width: 160px;
+    height: 160px;
   }
-  .about-box {
+  .about-box,
+  .contact-form {
     padding: 1.2rem 1rem;
-  }
-  .project-card {
-    padding: 1.2rem 0.8rem;
+    max-width: 98vw;
   }
 }
 
-/* Em telas pequenas, alinhar à esquerda para melhor leitura */
-@media (max-width: 600px) {
-  .about-text,
-  .project-description,
-  p {
-    text-align: left;
+/* Responsividade para celulares */
+@media screen and (max-width: 600px) {
+  .about-box,
+  .contact-form {
+    padding: 1rem 0.5rem;
+    max-width: 100vw;
   }
-}
-
-/* Foco nos campos do formulário */
-.form-field:focus, textarea.form-field:focus {
-  border: 1.5px solid var(--accent-color);
-  box-shadow: 0 0 16px 2px #00bcd4, 0 2px 12px 0 rgba(30, 34, 40, 0.15);
-  outline: none;
-  transition: box-shadow 0.3s, border-color 0.2s;
+  .project-card,
+  .music-card {
+    padding: 1rem 0.5rem;
+    width: 98vw;
+    max-width: 100vw;
+    min-width: 0;
+    height: auto;
+  }
+  .project-image,
+  .music-image {
+    height: 120px;
+  }
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+  .about-title,
+  .projects-title,
+  .music-title,
+  .contact-title {
+    font-size: 1.1rem;
+  }
+  .about-text {
+    font-size: 0.98rem;
+  }
+  .navbar {
+    padding: 0.3rem 0;
+  }
+  .navbar-menu {
+    gap: 0.7rem;
+    font-size: 0.92rem;
+  }
+  .navbar-link {
+    font-size: 0.92rem;
+    padding: 0.2rem 0;
+  }
 }
