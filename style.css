@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
-  --primary-color: #00bcd4;
-  --secondary-color: #3949ab;
-  --accent-color: #ff3cac;
-  --background-color: #181a1b;
-  --card-bg-color: #23272b;
-  --text-color: #f5f7fa;
-  --border-color: #222831;
+  --primary-color: #355c7d;
+  --secondary-color: #6c5b7b;
+  --accent-color: #5fa8d3; /* Azul claro elegante, combina com a paleta */
+  --background-color: #23272f;
+  --card-bg-color: #2d3142;
+  --text-color: #f7f7fa;
+  --border-color: #393e4f;
 }
 
 * {
@@ -52,7 +52,7 @@ body {
 
 .navbar-link {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--text-color);
   font-weight: 600;
   font-size: 1rem;
   position: relative;
@@ -108,7 +108,7 @@ body {
 
 h1 {
   font-size: 2.3rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   font-weight: 700;
   margin: 30px 0 10px 0;
   letter-spacing: -1px;
@@ -124,7 +124,7 @@ h3 {
 
 .header-subtitle {
   font-size: 1.15rem;
-  color: var(--secondary-color);
+  color: var(--accent-color);
   font-weight: 400;
   margin-bottom: 2rem;
 }
@@ -137,7 +137,7 @@ h3 {
 }
 .about-title {
   font-size: 1.7rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -151,6 +151,11 @@ h3 {
   box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
   padding: 2rem 2rem 1.5rem 2rem;
   text-align: justify;
+}
+.about-box {
+  background: var(--card-bg-color) !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
 }
 .about-text {
   font-size: 1.08rem;
@@ -171,7 +176,7 @@ h3 {
 .projects-title,
 .music-title {
   font-size: 1.7rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 2rem;
   font-weight: 600;
 }
@@ -185,11 +190,12 @@ h3 {
 
 .project-card,
 .music-card {
-  background: var(--card-bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
-  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #2d3142 60%, #393e4f 100%);
+  border: 1.5px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(30, 34, 40, 0.18),
+    0 1.5px 8px 0 rgba(48, 52, 70, 0.1);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
   max-width: 370px;
   min-width: 220px;
   width: 100%;
@@ -197,9 +203,11 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
-  gap: 0.7rem;
-  transition: box-shadow 0.3s, border-color 0.2s, transform 0.2s;
+  gap: 0.9rem;
+  transition: box-shadow 0.3s, border-color 0.2s, transform 0.2s,
+    background 0.4s;
+  position: relative;
+  overflow: hidden;
 }
 
 .music-card {
@@ -212,74 +220,64 @@ h3 {
 
 .project-card:hover,
 .music-card:hover {
-  box-shadow: 0 0 24px 6px #00bcd4, 0 4px 24px 0 rgba(30, 34, 40, 0.18);
+  box-shadow: 0 0 32px 8px #fff, 0 8px 32px 0 rgba(30, 34, 40, 0.22);
   border-color: var(--accent-color);
-}
-
-.project-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  background: linear-gradient(135deg, #393e4f 60%, #2d3142 100%);
+  transform: translateY(-10px) scale(1.025);
 }
 
 .project-image,
 .music-image {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Mantém a imagem quadrada */
+  height: 180px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-  background: #f5f7fa;
-  flex-shrink: 0;
-}
-
-/* Em telas pequenas, mantém a proporção quadrada */
-@media screen and (max-width: 600px) {
-  .project-image,
-  .music-image {
-    aspect-ratio: 1 / 1;
-    height: auto; /* Remove altura fixa */
-    min-height: 120px;
-    max-height: 220px;
-  }
+  border-radius: 18px; /* Todas as bordas arredondadas */
+  margin-bottom: 0.7rem;
+  background: #23272f;
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
+  display: block;
 }
 
 .project-title,
 .music-name {
-  font-size: 1.15rem;
-  color: var(--secondary-color);
-  font-weight: 600;
-  margin: 0;
+  font-size: 1.18rem;
+  color: var(--text-color);
+  font-weight: 700;
+  margin: 0.5rem 0 0.2rem 0;
   width: 100%;
   text-align: center;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  min-height: 2.5em;
-  flex-shrink: 0;
-  word-break: break-word;
-}
-
-.project-description {
-  font-size: 1rem;
-  text-align: left;
-  color: var(--text-color);
-  margin: 0;
+  letter-spacing: 0.5px;
   line-height: 1.3;
 }
 
-.music-link {
-  color: var(--primary-color);
+.project-description {
+  font-size: 1.02rem;
+  text-align: left;
+  color: var(--text-color);
+  margin: 0.2rem 0 0.7rem 0;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.music-link,
+.project-link {
+  color: var(--accent-color);
   font-weight: 600;
   text-decoration: none;
   margin-top: auto;
-  transition: color 0.2s, text-shadow 0.2s;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  background: rgba(192, 108, 132, 0.08);
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 0 transparent;
+  display: inline-block;
 }
-.music-link:hover {
-  color: var(--accent-color);
-  text-shadow: 0 0 8px #00bcd4;
+
+.music-link:hover,
+.project-link:hover {
+  color: #fff;
+  background: var(--accent-color);
+  box-shadow: 0 0 12px 2px var(--accent-color);
 }
 
 /* Contact */
@@ -293,7 +291,7 @@ h3 {
 }
 .contact-title {
   font-size: 1.7rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -309,6 +307,11 @@ h3 {
   border-radius: 14px;
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.08);
+}
+.contact-form {
+  background: var(--card-bg-color) !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 40, 0.1);
 }
 .form-field {
   padding: 0.8rem;
@@ -375,10 +378,11 @@ textarea.form-field:focus {
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: #ff3cac;
+  background: var(--accent-color);
   opacity: 0.18;
   animation: float-big 24s ease-in-out infinite;
-  box-shadow: 0 0 32px 8px #ff3cac, 0 0 64px 16px #ff3cac, 0 0 128px 32px #fff3;
+  box-shadow: 0 0 32px 8px var(--accent-color),
+    0 0 64px 16px var(--accent-color), 0 0 128px 32px #fff3;
   /* O último valor (#fff3) dá um leve brilho branco */
 }
 
@@ -527,4 +531,13 @@ textarea.form-field:focus {
       transform: translateY(-5px) scale(1);
     }
   }
+}
+
+.project-card,
+.music-card,
+.about-box,
+.contact-form {
+  opacity: 1 !important;
+  background: var(--card-bg-color) !important;
+  backdrop-filter: none !important;
 }
