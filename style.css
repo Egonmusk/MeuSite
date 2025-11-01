@@ -943,16 +943,23 @@ textarea.form-field:focus {
 
 /* Ajuste do título dentro do card */
 .pdf-card .project-title {
-  font-size: 1.1rem;
-  margin: 1rem 0;
+  margin: 0;
   color: var(--text-color);
+  font-size: 1rem;
 }
 
 /* Ajuste da descrição dentro do card */
 .pdf-card .project-description {
+  color: #bfc5ca;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0.25rem auto;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-wrap: break-word;
   font-size: 0.95rem;
-  color: #aaa;
-  margin-bottom: 1rem;
+  padding: 0 0.25rem;
 }
 
 /* Responsividade para os cards PDF */
