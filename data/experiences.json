@@ -1,0 +1,38 @@
+[
+    {
+        "company": "Aernnova Aerospace do Brasil",
+        "title": "Assistente de qualidade - Estágio",
+        "period": "Agosto 2024 - Agosto 2025",
+        "description": "Como estagiário assistente da qualidade, fui responsável pelo controle de metrologia no setor da qualidade da empresa. Minhas principais atividades incluíam garantir que os instrumentos de medição estivessem em condições adequadas de uso e dentro do prazo de validade estabelecido. Para isso, mantinha contato com empresas terceirizadas para realizar as calibrações e manutenções necessárias. Além disso, era responsável pelo arquivamento dos certificados de calibração e demais documentos relacionados ao controle metrológico e documentação dos produtos fabricados pela empresa.",
+        "logo": "https://api.iconify.design/material-symbols:flight-takeoff.svg?color=%235fa8d3",
+        "skills": [
+            "Controle de Qualidade",
+            "Metrologia",
+            "Documentação Técnica"
+        ]
+    },
+    {
+        "company": "HMZ Supply Chain Solutions",
+        "title": "Assistente de importação e exportação",
+        "period": "Maio 2024 - Julho 2024",
+        "description": "Atuei como auxiliar de importação e exportação, acompanhando processos logísticos e aduaneiros, conferindo e organizando a documentação necessária, além de controlar prazos de entrega e gerenciar registros em sistemas internos. Busquei garantir a conformidade com normas e procedimentos, colaborando com a equipe para otimizar fluxos e solucionar pendências, contribuindo para que as operações de comércio exterior ocorressem de forma eficiente e organizada.",
+        "logo": "https://api.iconify.design/material-symbols:inventory-2.svg?color=%235fa8d3",
+        "skills": [
+            "Comércio Exterior",
+            "Logística",
+            "Documentação"
+        ]
+    },
+    {
+        "company": "Construtora Reflora",
+        "title": "Assistente administrativo - Aprendiz",
+        "period": "Janeiro 2023 - Dezembro 2023",
+        "description": "Como aprendiz, trabalhei como assistente administrativo no setor de compras de uma construtora em São José dos Campos. Minhas atividades incluíam o lançamento de notas fiscais, organização de documentos e liberação de EPIs. Também tive a oportunidade de atuar diretamente nos empreendimentos da empresa, auxiliando o almoxarifado no recebimento de materiais, além de contribuir com a preparação de documentos e processos para auditorias.",
+        "logo": "https://api.iconify.design/material-symbols:construction.svg?color=%235fa8d3",
+        "skills": [
+            "Compras",
+            "Administrativo",
+            "Almoxarifado"
+        ]
+    }
+]
