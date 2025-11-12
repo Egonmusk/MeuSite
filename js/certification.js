@@ -17,8 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "https://images.credly.com/size/340x340/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
       link: "https://www.credly.com/org/comptia/badge/comptia-security-ce-certification",
       available: false
+    },
+      {
+      title: "IELTS General Training",
+      image: "https://images.seeklogo.com/logo-png/45/1/british-council-x-ielts-logo-png_seeklogo-450871.png",
+      link: "https://www.britishcouncil.org.br/exame/ielts",
+      available: false
     }
-
   ];
 
   const container = document.getElementById("certifications-grid");
