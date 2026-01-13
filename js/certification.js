@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Google Cloud Computing Foundations Certificate",
       image: "https://images.credly.com/size/340x340/images/4dda8ae4-99ee-476c-bca3-6f0adbab42fe/image.png",
-      link: "https://www.credly.com/org/google-cloud/badge/google-cloud-computing-foundations-certificate",
-      available: false
+      link: "https://www.credly.com/earner/earned/badge/ee718dc9-bf17-453a-9e96-3b6c3a7000ec",
+      available: true
     },
     {
       title: "CompTIA Security+ Certification",
