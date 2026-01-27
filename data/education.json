@@ -3,28 +3,24 @@
         "institution": "Anhanguera Educacional",
         "title": "Análise e Desenvolvimento de Sistemas - Tecnólogo",
         "period": "fevereiro 2025 - Julho 2027",
-        "description": "Durante o curso de Análise e Desenvolvimento de Sistemas, estou aprendendo muito sobre desenvolvimento de software, programação em linguagens como Java, Python e JavaScript, além de trabalhar com bancos de dados relacionais e NoSQL. Também estou tendo contato com metodologias ágeis (como Scrum), versionamento com Git e desenvolvimento web e mobile. Estudamos engenharia de software, análise de requisitos, UX/UI, segurança da informação e fundamentos de redes e sistemas operacionais. O curso me dá uma base sólida para entender todo o processo de criação de sistemas, desde o planejamento até a entrega. Tem sido uma experiência muito enriquecedora para minha formação na área de tecnologia.",
         "logo": "https://api.iconify.design/mdi:school-outline.svg"
     },
     {
         "institution": "Fatec São José dos Campos - Prof. Jessen Vidal",
         "title": "Manutenção de Aeronaves - Tecnólogo",
         "period": "Fevereiro 2024 - Trancado",
-        "description": "Durante o curso de Tecnólogo em Manutenção de Aeronaves, estou aprendendo sobre os principais sistemas de uma aeronave, como estruturas, motores, aviônicos e sistemas hidráulicos e pneumáticos. As disciplinas incluem leitura e interpretação de manuais técnicos, regulamentos da aviação (ANAC, FAA), segurança operacional e qualidade na manutenção. Também temos aulas práticas em oficinas e hangares, onde colocamos em prática a desmontagem, inspeção e montagem de componentes aeronáuticos. O curso me dá uma formação sólida para atuar com responsabilidade e precisão na manutenção preventiva e corretiva de aeronaves, sempre seguindo normas rígidas de segurança e confiabilidade.",
         "logo": "https://api.iconify.design/mdi:school-outline.svg"
     },
     {
         "institution": "ETEC - Escola Técnica Estadual de São Paulo",
         "title": "Análise e Desenvolvimento de Sistemas - Técnico",
         "period": "Fevereiro 2019 - Agosto 2022",
-        "description": "Durante o curso técnico em Análise e Desenvolvimento de Sistemas, desenvolvi habilidades em lógica de programação, front-end (HTML, CSS, JavaScript) e back-end (PHP, Python, MySQL). Aprendi a estruturar bancos de dados de forma prática e funcional. Trabalhei em projetos em grupo utilizando metodologias ágeis, versionamento com Git e ferramentas como GitHub. O curso também me ajudou a desenvolver raciocínio lógico, resolução de problemas e organização. Hoje sigo me aperfeiçoando e buscando oportunidades para atuar como desenvolvedor júnior, sempre aberto a novos aprendizados e desafios.",
         "logo": "https://api.iconify.design/mdi:laptop.svg?color=%23007BFF"
     },
     {
         "institution": "ETEC - Escola Técnica Estadual de São Paulo",
         "title": "Administração - Técnico",
         "period": "Agosto 2022 - Dezembro 2023",
-        "description": "Durante o curso técnico em Administração, aprendi na prática como funcionam os processos de uma empresa. Estudei rotinas administrativas, gestão de pessoas, finanças, logística e marketing. Desenvolvi habilidades com ferramentas como Excel, planilhas financeiras, relatórios e organização de documentos. Também participei de projetos em grupo que simularam o dia a dia empresarial, trabalhando com planejamento, comunicação e trabalho em equipe. No estágio, tive contato direto com atividades administrativas, como controle de estoque, atendimento ao cliente e suporte em processos internos. Essa experiência me ajudou a desenvolver mais responsabilidade, proatividade e visão organizacional. Sigo em constante aprendizado e buscando oportunidades para crescer profissionalmente na área administrativa.",
         "logo": "https://api.iconify.design/mdi:briefcase-outline.svg?color=%23007BFF"
     }
 ]

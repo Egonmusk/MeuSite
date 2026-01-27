@@ -17,8 +17,6 @@
                 <span class="course-period">${e.period || ''}</span>
               </div>
             </div>
-            <p class="course-description">${e.description || ''}</p>
-            <div class="skill-badges">${(e.skills || []).map(s => `<span class="badge">${s}</span>`).join('')}</div>
           `;
       grid.appendChild(card);
     }
